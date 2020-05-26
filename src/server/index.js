@@ -17,9 +17,10 @@ const app = express()
 
 
 /* Middleware*/
+const bodyParser = require('body-parser')
 //Here we are configuring express to use body-parser as middle-ware.
-//app.use(bodyParser.urlencoded({ extended: false }));
-//app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 // Cors for cross origin allowance
 const cors= require('cors');
@@ -36,7 +37,8 @@ app.get('/', function (req, res) {
 
 // designates what port the app will listen to for incoming requests
 app.listen(8081, function () {
-    console.log('Example app listening on port 8081!')
+    console.log('App listening on port 8081!')
+    console.log('Press Ctrl+C to quit.')
 })
 
 app.get('/test', function (req, res) {
