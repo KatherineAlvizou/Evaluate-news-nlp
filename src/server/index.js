@@ -1,7 +1,16 @@
+const dotenv = require('dotenv');
+dotenv.config();
+
+
 var path = require('path')
 
 const mockAPIResponse = require('./mockAPI.js')
 
+var aylien = require("aylien_textapi");
+var textapi = new aylien({
+    application_id: process.env.API_ID,
+    application_key: process.env.API_KEY
+    });
 
 const express = require('express')
 const app = express()
