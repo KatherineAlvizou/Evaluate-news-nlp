@@ -1,4 +1,4 @@
- function handleSubmit(event) {
+ export function handleSubmit(event) {
     event.preventDefault()
 
     // check if url was put into the form field
@@ -14,4 +14,3 @@
 }
 
 
-export {handleSubmit}
